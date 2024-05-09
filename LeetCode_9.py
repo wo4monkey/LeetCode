@@ -11,9 +11,10 @@ def isPalindrome(x):
             return False
 
         rev = 0
-        i = len(str(x)) - 1
+        i = 0
         while (temp>0):
-            rev += (temp % 10) * (10 ** i)
+            rev *= 10
+            rev += temp % 10
             temp = temp // 10
             i -= 1
         return (rev == x)
